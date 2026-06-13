@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Wikimapia",
+  "url": "https://wikimapia.org",
+  "description": "Wikimapia is a collaborative geographic wiki that layers crowdsourced place information onto satellite imagery. Launched in 2006, the platform covers over 32 million geographic objects contributed by its community. The REST API provides programmatic access to places, categories, streets, and geographic searches using API-key authentication.",
+  "logo": "https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
+  "sameAs": [
+    "https://x.com/wikimapia",
+    "https://github.com/Wikimapia"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "API Support",
+    "url": "https://wikimapia.org/api/"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Wikimapia REST API",
+    "description": "REST API providing programmatic access to crowdsourced geographic data including places, categories, streets, and languages. Supports bounding-box queries, coordinate-based nearest-place lookups, full-text search, and detailed place retrieval including geometry, photos, comments, and community-tagged categories.",
+    "url": "https://wikimapia.org/api/"
+  },
+  "keywords": [
+    "Geospatial",
+    "Mapping",
+    "Crowdsourced",
+    "Places",
+    "Geographic Data",
+    "REST API",
+    "KML",
+    "JSON"
+  ],
+  "areaServed": {
+    "@type": "Place",
+    "name": "Global"
+  }
+}
