@@ -1,0 +1,58 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Wikimapia
+providerId: wikimapia
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - FinOps
+  - FOCUS
+  - Geospatial
+  - Crowdsourced
+description: FOCUS-aligned FinOps for Wikimapia API consumption.
+sources:
+  - https://wikimapia.org/api/
+  - https://wikimapia.org/api/?action=my_keys
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Wikimapia
+serviceCategory: Geospatial / Crowdsourced Mapping Data
+billingModel:
+  pricingCategory: Free (Registration Required)
+  billingFrequency: None (no monetary charge)
+  billingCurrency: USD
+focusColumns:
+  ServiceName: Wikimapia REST API
+  ServiceCategory: Geospatial Data
+  ProviderName: Wikimapia
+  PublisherName: Wikimapia
+  BillingCurrency: USD
+meters:
+  - name: api_requests
+    unit: request
+    aggregation: sum
+  - name: place_lookups
+    unit: request
+    aggregation: sum
+  - name: place_searches
+    unit: request
+    aggregation: sum
+principles:
+  - name: Visibility
+    description: Track Wikimapia API request volume monthly per registered key and domain.
+  - name: Allocation
+    description: Assign API keys per team or product to attribute usage to cost centers.
+  - name: Optimization
+    description: >-
+      Cache place data locally to minimize repeated lookups against the 100-req/5-min quota.
+      Use the data_blocks parameter to limit response payload size and reduce latency.
+  - name: Accountability
+    description: >-
+      Monitor request counts against the 100/5-min threshold. Set alerts before quota
+      exhaustion. Review key usage quarterly and retire unused keys.

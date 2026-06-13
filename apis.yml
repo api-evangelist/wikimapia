@@ -1,0 +1,69 @@
+aid: wikimapia
+name: Wikimapia
+description: >-
+  Wikimapia is a collaborative geographic wiki that layers crowdsourced place information onto
+  satellite imagery. Launched in 2006, the platform covers over 32 million geographic objects
+  contributed by its community. The REST API provides programmatic access to places, categories,
+  streets, and geographic searches using API-key authentication. Responses are available in JSON
+  and KML formats. The API supports bounding-box queries, coordinate-based nearest-place lookups,
+  full-text search, and detailed place retrieval including geometry, photos, comments, and
+  community-tagged categories.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Geospatial
+  - Mapping
+  - Crowdsourced
+  - Places
+  - Geographic Data
+created: '2026-06-13'
+modified: '2026-06-13'
+url: https://raw.githubusercontent.com/api-evangelist/wikimapia/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: wikimapia:rest-api
+    name: Wikimapia REST API
+    description: >-
+      The Wikimapia REST API provides access to crowdsourced geographic data including places,
+      categories, streets, and languages. Supports place search by bounding box, coordinates,
+      or full-text query; place lookup by ID with configurable data blocks; nearest-place and
+      nearest-street queries; and full category and language listings. Requires an API key passed
+      as a query parameter. Responses are available in JSON (default) and KML formats.
+      The free tier allows up to 100 requests per 5 minutes per domain.
+    humanURL: https://wikimapia.org/api/
+    baseURL: https://api.wikimapia.org
+    tags:
+      - Geospatial
+      - Mapping
+      - Crowdsourced
+      - Places
+      - REST
+    properties:
+      - type: Documentation
+        url: https://wikimapia.org/api/
+      - type: RateLimits
+        url: https://wikimapia.org/api/?action=my_keys
+common:
+  - type: Website
+    url: https://wikimapia.org/
+  - type: Documentation
+    url: https://wikimapia.org/api/
+  - type: GitHubOrg
+    url: https://github.com/Wikimapia
+  - type: Blog
+    url: https://wikimapia.org/blog/
+  - type: Pricing
+    url: https://wikimapia.org/api/?action=my_keys
+  - type: X
+    url: https://x.com/wikimapia
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/wikimapia/refs/heads/main/plans/wikimapia-plans-pricing.yml
+  - type: RateLimits
+    url: https://raw.githubusercontent.com/api-evangelist/wikimapia/refs/heads/main/rate-limits/wikimapia-rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/wikimapia/refs/heads/main/finops/wikimapia-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

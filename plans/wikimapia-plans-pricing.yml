@@ -1,0 +1,67 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Wikimapia
+providerId: wikimapia
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - Geospatial
+  - Crowdsourced
+  - Places
+  - Mapping
+description: >-
+  Wikimapia provides a single free API tier available to any registered developer. There is no
+  paid commercial tier documented publicly. Developers register for an API key and are granted
+  up to 100 requests per 5-minute window per domain. The example key (for testing) is limited
+  to approximately 1 request per 30 seconds.
+sources:
+  - https://wikimapia.org/api/
+  - https://wikimapia.org/api/?action=my_keys
+plans:
+  - id: wikimapia-free
+    name: Free Developer API
+    type: free
+    description: >-
+      Free API access available to any developer with a registered Wikimapia account. Allows up
+      to 100 requests per 5-minute window per registered domain or application.
+    entries:
+      - label: Per 5-minute window
+        name: requests_per_5min
+        type: subscription
+        metric: request
+        limit: 100
+        timeFrame: 5 minutes per domain
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: Free registration required
+      - name: API key per domain/application
+      - name: JSON and KML response formats
+      - name: Access to place search, lookup, categories, streets, languages
+      - name: No SLA or uptime guarantee documented
+  - id: wikimapia-example-key
+    name: Example / Testing Key
+    type: free
+    description: >-
+      A public 'example' API key provided for testing and evaluation purposes. Strictly rate
+      limited to approximately 1 request per 30 seconds. Not suitable for production use.
+    entries:
+      - label: Per 30 seconds
+        name: requests_per_30s
+        type: subscription
+        metric: request
+        limit: 1
+        timeFrame: 30 seconds
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: No registration required
+      - name: Testing and evaluation only
+      - name: Limited to 1 request per 30 seconds
+      - name: Not for production use

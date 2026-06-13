@@ -1,0 +1,42 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Wikimapia
+providerId: wikimapia
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - Rate Limiting
+  - Geospatial
+  - Places
+description: >-
+  Wikimapia enforces per-domain rate limits tied to the registered API key. Developers with a
+  registered key may issue up to 100 requests in any 5-minute window. The public 'example' key
+  is capped at roughly 1 request per 30 seconds. No HTTP retry-after headers or formal 429
+  response codes are explicitly documented; over-quota behavior should be handled with
+  exponential back-off.
+sources:
+  - https://wikimapia.org/api/
+  - https://wikimapia.org/api/?action=my_keys
+headers:
+  apiKey: key (query parameter)
+responseCodes:
+  throttled: 429
+limits:
+  - name: Registered developer key
+    scope: domain
+    metric: requests_per_window
+    limit: 100
+    timeFrame: 5 minutes
+    notes: >-
+      Up to 100 requests per 5-minute window per registered domain or application. Developers
+      can register multiple keys for multiple domains.
+  - name: Example / testing key
+    scope: global
+    metric: requests_per_window
+    limit: 1
+    timeFrame: 30 seconds
+    notes: >-
+      The public 'example' key is limited to approximately 1 request per 30 seconds and is
+      intended for evaluation only.
