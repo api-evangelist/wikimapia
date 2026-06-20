@@ -4,7 +4,7 @@
   "name": "Wikimapia",
   "url": "https://wikimapia.org",
   "description": "Wikimapia is a collaborative geographic wiki that layers crowdsourced place information onto satellite imagery. Launched in 2006, the platform covers over 32 million geographic objects contributed by its community. The REST API provides programmatic access to places, categories, streets, and geographic searches using API-key authentication.",
-  "logo": "https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
+  "logo": "https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg",
   "sameAs": [
     "https://x.com/wikimapia",
     "https://github.com/Wikimapia"
