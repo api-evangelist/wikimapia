@@ -3,19 +3,12 @@
   "feeds": [
     {
       "source": "https://wikimapia.org/blog/",
-      "feed_url": "https://wikimapia.org/blog/",
-      "title": "",
+      "feed_url": "",
       "saved": 0,
-      "method": "none"
-    },
-    {
-      "source": "https://github.com/Wikimapia",
-      "feed_url": "https://github.com/Wikimapia",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "method": "agent-scrape"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T13:20:59Z",
+  "agent_pulled": "2026-06-27"
 }
