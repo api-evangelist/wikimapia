@@ -46,6 +46,8 @@ apis:
       - type: RateLimits
         url: https://wikimapia.org/api/?action=my_keys
 common:
+  - type: DomainSecurity
+    url: security/wikimapia-domain-security.yml
   - type: Website
     url: https://wikimapia.org/
   - type: Documentation
